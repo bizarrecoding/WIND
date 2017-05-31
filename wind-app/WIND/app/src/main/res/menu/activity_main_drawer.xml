@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/mediciones"
+            android:icon="@drawable/ic_measures"
+            android:title="Mediciones" />
+        <item
+            android:id="@+id/ubicacion"
+            android:icon="@drawable/ic_ubicacion"
+            android:title="Ubicacion" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Contactenos" />
+        <item
+            android:id="@+id/notifications"
+            android:icon="@drawable/ic_notifications"
+            android:title="Notificaciones" />
+    </group>
+</menu>

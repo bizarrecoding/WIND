@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #1e202b;
+    color: white;
+    font-family: "Roboto", "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+header{
+    padding: 35px;
+    width: 100%;
+    background-color: #303243;
+}
+header > a {
+    text-decoration: none;
+    color: white;
+}
+
+.wrapper{
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.logo{
+    display: inline-block;
+    height: 40px;
+    width: 220px;
+}
+.logo>img,.logo>div{
+    display: inline-block;
+    padding-right: 15px
+}
+.logo>img{
+    vertical-align: top;
+}
+.title, .subtitle{
+    color: white;
+    font-size: 1em;
+    margin: 0;
+}
+.title{
+    font-size: 1.3em;
+}
+
+
+#sensor{
+    background-color: #323544;
+}
+#sensor> .header{
+    padding-top: 20px;
+    margin: 0 20px;
+}
+#sensor > .content{
+    padding: 20px;
+}
+#sensor> .header > .day{
+    display: inline-block;
+}
+#sensor> .header > .date{
+    float: right;
+}
+.location{
+    font-size: 2em;
+}
+/*.temp{
+    padding: 30px 0;
+}*/
+.temp > div {
+    display: inline-block;
+}
+.measures > p{
+    font-size: 2em;
+}
+.measures > p > img{
+    width: 42px;
+    height: 42px;
+}
+.content > span{
+    margin-right: 10px;
+}
+.recent{
+    margin-top: 30px;
+}
+#sensor1,#sensor2{
+    background-color: #323544;
+    margin-bottom: 12.5px;
+    margin-top: 12.5px;
+    padding: 10px;
+}
+#sensor1{
+    margin-left: -15px;
+}
+#sensor2{
+    margin-right: -15px;
+    margin-left: 9px;
+}
+@media (max-width: 1023px) {
+    nav{ display: inherit; }
+    #map{
+        display: block;
+        width: 100%;
+        height: 40%;
+        min-height: 300px;
+        background-color: white;
+    }
+    #sensor1,#sensor2{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+}
+@media (min-width: 1024px) {
+    .mblogo{
+        display: none;
+    }
+    nav{
+        float: right;
+    }
+    nav > button{
+        display: none;
+    }
+    .menu-item {
+        display: inline-block;
+        text-decoration: none;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0 10px;
+        padding-top:3px;
+        border: 2px solid #303243;
+    }
+    .menu-item:hover, .current-menu-item{
+        color: #009ad8;
+        border: 2px solid #009ad8;
+        border-radius: 25px;
+    }
+    nav > ul  > li > a:hover{
+        color: #009ad8;
+        text-decoration: none;
+    }
+    nav > ul  > li > a{
+        color: white ;
+        text-decoration: none;
+    }
+    /*################ Content ################*/
+    #map,#sensor{
+        min-height: 440px;
+        display: inline-block;
+        width: 29%;
+        vertical-align: top;
+    }
+    #map{
+        width: 70%;
+        background-color: white;
+    }
+}

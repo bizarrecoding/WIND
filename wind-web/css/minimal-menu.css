@@ -1,0 +1,488 @@
+.sub-menu {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+.minimal-menu a:hover {
+    /*color: #fff!important;*/
+    color: #FFF !important;
+}
+
+.minimal-menu {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    /*border: 2px solid #fff;*/
+    /*font-size: 0;*/
+    line-height: 0;
+    /*-webkit-box-shadow:	0 1px 0 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:	0 1px 0 1px rgba(0, 0, 0, 0.1);
+	box-shadow:			0 1px 0 1px rgba(0, 0, 0, 0.1);*/
+}
+
+.minimal-menu h3 {
+    font-weight: normal;
+}
+
+.minimal-menu a {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.minimal-menu ul, .minimal-menu ul li, .minimal-menu ul li a {
+    position: relative;
+}
+
+.minimal-menu ul {
+    z-index: 7999;
+}
+
+.minimal-menu ul li {
+    /*padding-bottom: 15px;*/
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.minimal-menu ul li:hover {
+    /*border-bottom: 5px solid #7e1e1e;   /*#02712d;* /
+    background-color: #be1e1e;          /*#23ae49;* /
+    color: white;*/
+    color: #009ad8;
+}
+
+.minimal-menu ul li a {
+    display: block;
+    padding: 5px 9px;
+    /*font-size: 19px;*/
+    line-height: 23px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.minimal-menu>ul>li>a {
+    /*text-transform: uppercase; */
+    /*border: 1px solid transparent;*/
+    color: #FFF;
+}
+
+.minimal-menu>ul>li:hover>a {
+    /*border: 1px solid #fff;
+				background-color:#64c9ea;*/
+    border-bottom: 1px solid transparent;
+}
+
+.minimal-menu ul li.submenu>a:before, .minimal-menu ul li.submenu>a:after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    background: #fff;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.minimal-menu ul li.submenu>a:before {
+    margin-left: -4px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.minimal-menu ul li.submenu>a:after {
+    margin-left: -1px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+ul.sub-menu li a {
+    line-height: 30px;
+}
+
+ul.sub-menu>li:hover {
+    background-color: #f0f1f3;
+}
+
+ul.sub-menu>li {
+    border-bottom: 1px solid #a4a4a5;
+}
+
+
+/* RESPONSIVE
+================================================== */
+
+@media only screen and (min-width: 1023px) {
+    /* White
+	----------------*/
+    .minimal-menu.clr-white {
+        /*background: aliceblue;*/
+        /*background: #fff;*/
+        /*border-color: #000;*/
+    }
+    .minimal-menu.clr-white>ul>li>a {
+        color: white;
+    }
+    .minimal-menu.clr-white>ul>li:hover>a {
+        border-color: #aaa;
+        color: #00334e;
+    }
+    .minimal-menu.clr-white ul ul li:hover>a {
+        /*border-color: #999;*/
+        color: #4f5051!important;
+        /* sobre el sub menu */
+        background-color: #f0f1f3;
+        /* sobre el sub menu */
+    }
+    .minimal-menu.clr-white>ul>li.submenu>a:before, .minimal-menu.clr-white>ul>li.submenu>a:after {
+        background: #999;
+    }
+    .minimal-menu-button {
+        display: none;
+    }
+    .minimal-menu {
+        /*-webkit-border-radius:	30px;
+		-moz-border-radius:		30px;
+		border-radius:			30px;*/
+    }
+    .minimal-menu.pos-fixed {
+        position: fixed;
+        top: 0px;
+        left: -2px;
+        right: -2px;
+        z-index: 7999;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    .minimal-menu a {
+        white-space: nowrap;
+        /*-webkit-border-radius:	50px;
+		-moz-border-radius:		50px;
+		border-radius:			50px;*/
+    }
+    .minimal-menu>ul {
+        margin: 0px;
+        padding: 5px;
+    }
+    .minimal-menu ul li {
+        display: inline-block;
+    }
+
+	.minimal-menu ul li a {
+	    line-height: 10px;
+	}
+
+    .minimal-menu ul li.submenu:hover>a:before, .minimal-menu ul li.submenu:hover>a:after {
+        bottom: -20px;
+        opacity: 0;
+    }
+    /*** Submenu ***/
+    .minimal-menu ul ul, .minimal-menu ul .menu-wrapper {
+        position: absolute;
+        display: block;
+        visibility: hidden;
+        z-index: 7999;
+        height: auto;
+        left: 3px;
+        top: 100%;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        border: 1px solid #e3e3e3;
+        border-bottom-width: 3px;
+        opacity: 0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+    .minimal-menu ul li:hover>ul, .minimal-menu ul li:hover>.menu-wrapper {
+        visibility: visible;
+        /*padding: 10px 0;*/
+        opacity: 1;
+        background-color: #fff;
+        /* fondo del sub menu */
+    }
+    .minimal-menu ul ul li {
+        display: block;
+        overflow: hidden;
+        height: auto;
+        padding: 10px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .minimal-menu ul ul li a {
+        font-size: 14px;
+        color: #262626!important;
+        border: 1px solid transparent;
+    }
+    .minimal-menu ul ul li:hover>a {
+        border-style: solid;
+        border-width: 1px;
+    }
+    .minimal-menu ul li:hover ul li {
+        overflow: visible;
+        padding: 0 10px;
+    }
+    .minimal-menu ul ul li.submenu>a:before, .minimal-menu ul ul li.submenu>a:after {
+        left: auto;
+        top: 50%;
+        right: 0;
+        background: #ccc;
+    }
+    .minimal-menu ul ul li.submenu>a:before {
+        margin-top: -1px;
+    }
+    .minimal-menu ul ul li.submenu>a:after {
+        margin-top: 2px;
+    }
+    .minimal-menu ul ul li.submenu>a:hover:before, .minimal-menu ul ul li.submenu>a:hover:after {
+        right: -13px;
+    }
+    .minimal-menu ul ul ul {
+        left: 100%;
+        top: -11px;
+    }
+    /* Megamenu */
+    .minimal-menu ul li.megamenu {
+        position: static;
+    }
+    .minimal-menu ul .menu-wrapper {
+        position: absolute;
+        left: -1px;
+        top: 100%;
+        margin-top: -5px;
+        width: 100%;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    .minimal-menu ul .menu-wrapper a {
+        white-space: inherit;
+    }
+    .minimal-menu ul .menu-wrapper .menu-col {
+        position: relative;
+        float: left;
+        width: 23%;
+        margin: 0 1%;
+    }
+    .minimal-menu ul .menu-wrapper h3 {
+        margin: 20px 15px;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000;
+    }
+    .minimal-menu ul .menu-wrapper ul {
+        position: relative;
+        visibility: hidden;
+        height: 100%;
+        border: 0;
+        opacity: 1;
+        background: transparent;
+    }
+    .minimal-menu ul li:hover>.menu-wrapper ul {
+        visibility: visible;
+    }
+    .minimal-menu ul .menu-wrapper ul li {
+        padding: 0 10px;
+    }
+    .minimal-menu .show-submenu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #menu a {
+        color: white;
+        text-align: left;
+    }
+    .minimal-menu>ul>li>a {
+        padding: 18px;
+        background-color: #00334e;
+        text-transform: uppercase;
+    }
+    .minimal-menu.clr-white {
+        background: #fff;
+    }
+    .minimal-menu.clr-white h3, .minimal-menu.clr-white ul li a {
+        color: #c2e1f6;
+        border-bottom-color: white;
+        background: #414042;
+    }
+    .minimal-menu.clr-white h3 {
+        background: rgba(0, 0, 0, 0.05);
+    }
+    .minimal-menu.clr-white ul li a:hover {
+        background: #c2e1f6;
+        color: black;
+    }
+    .minimal-menu {
+        border-color: rgba(100%, 100%, 100%, 0.3);
+    }
+    .minimal-menu-button, .minimal-menu {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 7999;
+    }
+    input.minimal-menu-button {
+        display: none;
+    }
+    label.minimal-menu-button {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        /*text-transform: uppercase;*/
+        background: #00334e;
+        color: #fff;
+        cursor: pointer;
+        text-indent: -9999px;
+    }
+    label.minimal-menu-button:before {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 6px;
+        left: 10px;
+        bottom: 12px;
+        border-top: 15px double #fff;
+        border-bottom: 6px solid #fff;
+        z-index: 7999;
+        padding: 2.5px;
+    }
+    .minimal-menu {
+        overflow: auto;
+        left: -100%;
+        top: 0;
+        width: 55%;
+        height: 100%;
+        opacity: 0;
+        -webkit-transition: left 0.8s, opacity 0.5s;
+        -moz-transition: left 0.8s, opacity 0.5s;
+        transition: left 0.8s, opacity 0.5s;
+    }
+    #mobile-nav:checked+.minimal-menu {
+        visibility: visible;
+        left: 0;
+        opacity: 1;
+    }
+    .minimal-menu h3, .minimal-menu ul li a {
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid rgba(100%, 100%, 100%, 0.2);
+        color: #fff;
+    }
+    .minimal-menu h3 {
+        font-size: 18px;
+        line-height: 1em;
+        margin: 0;
+        padding: 20px 0 20px 40px;
+        color: #fff;
+        background: rgba(100%, 100%, 100%, 0.10);
+    }
+    .minimal-menu > .mblogo{
+        display:block;
+        width: 100%;
+        height: 35%;
+        background-color: #00334e;
+    }
+    .minimal-menu ul {
+        margin: 0;
+        padding: 0;
+        background-color: #00334e;
+        height: 65%;
+        font-size: 19px;
+    }
+    .minimal-menu li, .minimal-menu a {
+        display: block;
+    }
+    .minimal-menu li {
+        position: relative;
+    }
+    .minimal-menu a:hover {
+        background: rgba(100%, 100%, 100%, 0.2);
+        color: black;
+    }
+    .minimal-menu ul>li {
+        padding-bottom: 0;
+    }
+    .minimal-menu>ul>li:hover>a {
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+    }
+    .minimal-menu ul ul a {
+        padding-left: 40px;
+    }
+    .minimal-menu ul ul ul a {
+        padding-left: 55px;
+    }
+    .minimal-menu ul ul ul ul a {
+        padding-left: 70px;
+    }
+    .minimal-menu ul ul li a {
+        font-size: 14px;
+    }
+    .minimal-menu ul li.submenu>a:before, .minimal-menu ul li.submenu>a:after {
+        top: 50%;
+        left: auto;
+        right: 12px;
+    }
+    .minimal-menu.clr-white ul li.submenu a:before, .minimal-menu.clr-white ul li.submenu a:after {
+        background: #999;
+    }
+    .minimal-menu ul li.submenu>a:before {
+        margin-top: -2px;
+    }
+    .minimal-menu ul li.submenu>a:after {
+        margin-top: 1px;
+    }
+    .minimal-menu .show-submenu {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 40px;
+        min-width: 100%;
+        min-height: 40px;
+        margin: 0;
+        opacity: 0;
+        -webkit-appearance: none;
+    }
+    .minimal-menu .show-submenu+ul, .minimal-menu .show-submenu+.menu-wrapper {
+        display: none;
+        visibility: hidden;
+    }
+    .minimal-menu .show-submenu:checked+ul, .minimal-menu .show-submenu:checked+.menu-wrapper {
+        display: block;
+        visibility: visible;
+    }
+
+    .mblogo{
+        padding: 50px;
+    }
+    .mblogo > img{
+        width: 50%;
+    }
+    .mblogo > h1, .mblogo > span{
+        margin: 10px 0 !important;
+        color: white;
+    }
+    .mblogo>h1{
+        font-size: 1.3em;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .minimal-menu {
+        width: 70%;
+    }
+}
